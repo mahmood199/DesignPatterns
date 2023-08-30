@@ -3,6 +3,15 @@ build/
 !gradle/wrapper/gradle-wrapper.jar
 !**/src/main/**/build/
 !**/src/test/**/build/
+/local.properties
+/.idea
+build
+/captures
+.externalNativeBuild
+.cxx
+*.apk
+*.aab
+output-metadata.json
 
 ### IntelliJ IDEA ###
 .idea/modules.xml
