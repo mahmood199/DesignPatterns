@@ -1,18 +1,20 @@
 package builder
 
 data class NotificationSettings(
-    val isEnabled: Boolean,
-    val subscriptions: List<Subscription>
+    val isEnabled: Boolean = false,
+    val subscriptions: List<Subscription> = listOf()
 )
+val emailAddress = EmailAddress(value = "Mahmood")
+val phoneNumber = PhoneNumber("9876543210")
 
 fun main() {
     createNotificationSettings(
-        emailAddress = EmailAddress(value = "Mahmood"),
-        phoneNumber = PhoneNumber("9876543210")
+        emailAddress = emailAddress,
+        phoneNumber = phoneNumber
     )
     createNotificationSettingsV2(
-        emailAddress = EmailAddress(value = "Mahmood"),
-        phoneNumber = PhoneNumber("9876543210")
+        emailAddress = emailAddress,
+        phoneNumber = phoneNumber
     )
 }
 

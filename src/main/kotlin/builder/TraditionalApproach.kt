@@ -6,8 +6,13 @@ class NotificationSettingsBuilder : INotificationSettingsBuilder {
 
     override var enabled: Boolean = false
 
+    fun send(topicToDestination: Pair<Topic, Destination>, frequency: Frequency) {
+        val (topic, destination) = topicToDestination
+        subscriptions.add(element = Subscription(destination = destination, topic = topic, frequency = frequency))
+    }
+
     override fun addSubscription(destination: Destination, topic: Topic, frequency: Frequency) {
-        subscriptions.add(Subscription(destination, topic, frequency))
+        subscriptions.add(element = Subscription(destination = destination, topic = topic, frequency = frequency))
     }
 
     override fun build(): NotificationSettings {
